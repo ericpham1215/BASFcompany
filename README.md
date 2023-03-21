@@ -123,3 +123,94 @@ B.	The system is difficult to keep track of
 | Report     | Report_ID(Data Element), Status(Data Element), Employee_ID(Foreign Key)(Data Element), Contractor_ID(Foreign Key)(Data Element)           |     
 |  TASK    |  Task_ID(Data Element), Task_Status(Data Element), Start_Date(Data Element), End_Date(Data Element), Task_Description(Data Element), Job_ID(Foreign Key)(Data Element), Contractor_ID(Foreign Key)(Data Element)       |  
 
+# SQL QUERIES
+### Contractors Table
+````
+SELECT *
+FROM contractors;
+````
+![image](https://user-images.githubusercontent.com/128433840/226497511-bad20624-ae91-4387-b29a-7c1d832d10fa.png)
+ 
+### Employees Table
+
+````
+SELECT *
+FROM employees;
+````
+![image](https://user-images.githubusercontent.com/128433840/226498087-fbb8c125-893e-4f28-b283-231a5b76dcd8.png)
+
+### Feedback Table
+
+````
+SELECT *
+FROM feedback;
+````
+![image](https://user-images.githubusercontent.com/128433840/226498147-f627996a-dfb9-47e3-94bf-cdeaf6fa71ac.png)
+
+### Jobs Table
+````
+SELECT *
+FROM jobs;
+````
+![image](https://user-images.githubusercontent.com/128433840/226498218-9e474f36-4bea-4f50-af64-ec9d95f1b1d0.png)
+
+### Report Table
+
+````
+SELECT *
+FROM reports;
+````
+![image](https://user-images.githubusercontent.com/128433840/226498283-fa72fc7d-436c-48b1-9d7a-4bd598997312.png)
+
+### Task Table
+````
+SELECT *
+FROM task;
+````
+![image](https://user-images.githubusercontent.com/128433840/226498399-86c7752a-abe7-4f6c-bd1b-698384699d28.png)
+
+### Contractor Hire Status Query
+
+````
+SELECT c.contractor_ID, c.contractor_first_name, c.contractor_last_name, f.hire_status, e.employee_id
+FROM contractors c, feedback f, employees e
+WHERE c.contractor_ID = f.contractor_ID and e.employee_ID = f.employee_ID
+order by c.contractor_ID ASC
+````
+![image](https://user-images.githubusercontent.com/128433840/226498743-2e1a58a8-fbc4-4dac-8385-6687d69e2991.png)
+
+### Contractor Job Task Query
+
+````
+SELECT c.contractor_ID, c.contractor_first_name, c.contractor_last_name, j.job_ID, t.task_description, t.task_ID
+FROM contractors c, jobs j. task t
+WHERE c.contractor_ID = t.contractor_ID and j.job_ID = t.job_ID
+ORDER by c.contractor_ID ASC
+````
+![image](https://user-images.githubusercontent.com/128433840/226499190-080c9a28-6616-422b-8c8a-3c80d20ef99b.png)
+
+### Job Status Query
+
+````
+SELECT DISTINCT j.job_ID, t.task_description, c.contractor_ID, status, start_date, end_date
+FROM contractors c, task t, report r, jobs j
+WHERE t.job_ID = j.job_ID
+AND
+t.contractor_ID = c.contractor_ID
+AND 
+r.contractor_ID = c.contractor_ID
+ORDER by job_ID
+````
+![image](https://user-images.githubusercontent.com/128433840/226499493-eab3bcd2-5d1e-4d6e-861a-bfd17d57662b.png)
+
+### Top Contractors Query
+
+````
+SELECT c.contractor?_ID, contractor_first_name, c.contractor_last_name, r.status
+FROM contractors c, report r
+WHERE c.contractor_ID = r.contractor_ID 
+AND
+r.status = 'Complete'
+ORDER by c.contractor_ID ASC
+````
+![image](https://user-images.githubusercontent.com/128433840/226499703-cf626193-71d3-48b1-b6f5-ed438b62b630.png)
