@@ -63,3 +63,62 @@ B.	The system is difficult to keep track of
 **Schedule Feasibility**	
 
 •	The new system will be up and running in less than 5 months.
+
+## Old ERD System
+
+![OLDERD](https://user-images.githubusercontent.com/128433840/226491688-5b9d93f5-1d94-404b-aa76-c1699374e534.PNG)
+
+## New ERD System
+
+![image](https://user-images.githubusercontent.com/128433840/226492087-4ba9b69d-23eb-4882-9191-8156ed1fa67a.png)
+
+## Context DFD of the New System 
+
+![image](https://user-images.githubusercontent.com/128433840/226492123-c81ac6e4-01c4-45c4-8f1d-c7c635258c8a.png)
+
+## Level 0 DFD of the New System
+
+![image](https://user-images.githubusercontent.com/128433840/226492147-a74fdf69-e60c-4db6-b6ff-fa1faf4a0972.png)
+
+## Entry Definition Matrix 
+
+| Data Element  | Description |
+| ------------- | ------------- |
+| Contractor_Street  | Contractor building number and street name  |
+| Contractor_ZipCode  | Zip code to the area which the contractor resides  |
+| Contractor_City    |  City in which the contractor resides       |
+|     Employee_Street       | Employee building number and street name        |
+|     Employee_ZipCode       | Zip code to the area which the employee resides        |
+|        Employee_City    | City in which the employee resides        |
+|     Job_ID          |  Identification number for the job       |
+|      Contractor_ID      |     Identification number of the contractor    |
+|         Contractor_Phone   |  Phone number of the contractor       |
+|      Contractor_Email      |Email of the contractor         |
+|      Contractor_FirstName      |  First name of the contractor       |
+|      Contractor_LastName     | Last name of the contractor        |
+|     Report_ID    |I dentification number for report   | 
+|    Status     | Current status for the job  | 
+|     Employee_ID    | Identification number for the employee  | 
+|       Employee_Phone  | Phone number of the employee  | 
+|      Employee_LastName   | Last name of the employee  | 
+|     Employee_FirstName    |First name of the employee   | 
+|     Job_City    | City where the task is located  | 
+|     Job_ZipCode    | Zip code where the task is located  | 
+|     Job_Street    | Street where the task is located  | 
+|   Task ID      | Identification number for the task   | 
+|    Start_Date     | Start date for the task  | 
+|     End_Date    | End date for the task  | 
+|      Task_Description   | Description for the task  | 
+
+
+## Tables
+
+|  Entity          |  Attributes      |      
+| ------------- |------------ |
+|   Job        | Job_ID(Data Element), Job_Location(Data Structure)    |     
+| CONTRACTORS     |   Contractor_ID(Data Element), Contractor_Address(Data Structure), Contractor_Phone(Data Element), Contractor_Email(Data Element), Contractor Name(Data Structure) Job_ID(Foreign Key)(Data Element)        |     
+|FEEDBACK(AS)    | Employee_ID(Foreign Key)(Data Element), Contractor_ID(Foreign Key)(Data Element)           |     
+|EMPLOYEE                   | Employee_ID(Data Element), Employee Address(Data Structure), Employee_Phone(Data Element), Employee_Name(Data Structure)          |     
+| Report     | Report_ID(Data Element), Status(Data Element), Employee_ID(Foreign Key)(Data Element), Contractor_ID(Foreign Key)(Data Element)           |     
+|  TASK    |  Task_ID(Data Element), Task_Status(Data Element), Start_Date(Data Element), End_Date(Data Element), Task_Description(Data Element), Job_ID(Foreign Key)(Data Element), Contractor_ID(Foreign Key)(Data Element)       |  
+
