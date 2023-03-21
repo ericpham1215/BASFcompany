@@ -1,3 +1,4 @@
+![image](https://user-images.githubusercontent.com/128433840/226496807-28288c2a-6cc9-454f-8e83-dd018306098a.png)
 
 ## Hello! This project deals with us going out to one of our local businesses and finding an issue that we could alleviate through systems design and development. We contacted BASF corporation, which is a German chemical producer that has a plant down here in Port Arthur, Texas.
 
