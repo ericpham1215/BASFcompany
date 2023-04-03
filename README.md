@@ -11,37 +11,37 @@ BASF Corporation in Texas is facing downtime when tracking job applicants throug
 ## PIECES Framework
 **Performance**
 
-A.	Throughput - There have been many problems with tracking different jobs because of the manager to employee ratio
+- Throughput - There have been many problems with tracking different jobs because of the manager to employee ratio
 
-B.	Response time to load up 3000+ jobs in the excel sheet is takes up too much time.
+- Response time to load up 3000+ jobs in the excel sheet is takes up too much time.
 
 **Information**
 
-A.	The current system is inefficient at pulling up data of applicants stored in Excel.
+- The current system is inefficient at pulling up data of applicants stored in Excel.
 
-B.	Current system lacks organization of data.
+- Current system lacks organization of data.
 
 **Economics**
 
-A.	This will not impact sales directly
+- This will not impact sales directly
 
-B.	Reduce hours used to manually update database
+- Reduce hours used to manually update database
 
 **Control**
 
-A.	Will reduce manual entry errors
+- Will reduce manual entry errors
 
-B.	Will allow the user to access past, present, and maybe even future problems due to scheduling. 
+- Will allow the user to access past, present, and maybe even future problems due to scheduling. 
 
 **Efficiency**
 
-A.	It takes a long time to find an applicant in Excel
+- It takes a long time to find an applicant in Excel
 
-B.	Only specific people have access to this file
+- Only specific people have access to this file
 
 **Service**
 
-A.	The current system is very time consuming
+- The current system is very time consuming
 
 B.	The system is difficult to keep track of
 
